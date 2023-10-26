@@ -1,0 +1,93 @@
+.signIn_box {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 60%;
+  height: 100%;
+  margin: auto;
+  background-color: rgba(27, 29, 77, 255);
+  box-shadow: 0 0 20px 6px #090b6f85;
+  color: #fff;
+}
+.form-container {
+  width: 35%;
+  background-color: rgba(20, 16, 49, 255);
+  padding: 40px;
+  margin: auto;
+  height: 40%;
+}
+.form-container label {
+  display: block;
+}
+
+.form-check {
+  gap: 10px;
+  text-align: end;
+  display: flex;
+}
+.btn {
+  width: 100px;
+  height: 30px;
+  margin: 20px 0;
+  cursor: pointer;
+  background-color: #6c63ff;
+  color: #fff;
+}
+
+.check-container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.check-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  background-color: #eee;
+}
+
+.check-container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+.check-container input:checked ~ .checkmark {
+  background-color: #2196f3;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.check-container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.check-container .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}
